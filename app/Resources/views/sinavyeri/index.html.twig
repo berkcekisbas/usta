@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sinavyeris list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sinavyeri</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+                <th>Yetkilikisi</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sinavyeri in sinavyeris %}
+            <tr>
+                <td><a href="{{ path('sinavyeri_show', { 'id': sinavyeri.id }) }}">{{ sinavyeri.id }}</a></td>
+                <td>{{ sinavyeri.sinavyeri }}</td>
+                <td>{{ sinavyeri.adres }}</td>
+                <td>{{ sinavyeri.telefon }}</td>
+                <td>{{ sinavyeri.yetkilikisi }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sinavyeri_show', { 'id': sinavyeri.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('sinavyeri_edit', { 'id': sinavyeri.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sinavyeri_new') }}">Create a new sinavyeri</a>
+        </li>
+    </ul>
+{% endblock %}

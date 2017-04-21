@@ -1,0 +1,47 @@
+<?php
+
+namespace TanimlamalarBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Oguzhan
+ *
+ * @ORM\Table(name="oguzhan")
+ * @ORM\Entity(repositoryClass="TanimlamalarBundle\Repository\OguzhanRepository")
+ */
+class Oguzhan
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     * @ORM\Column(name="ad", type="string")
+     */
+    private $ad;
+
+    /**
+     * @var string
+     * @ORM\Column(name="soyad", type="string")
+     */
+    private $soyad;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+

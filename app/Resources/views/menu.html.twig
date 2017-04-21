@@ -1,0 +1,251 @@
+<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+    <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+    <li class="sidebar-toggler-wrapper hide">
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        <div class="sidebar-toggler"> </div>
+        <!-- END SIDEBAR TOGGLER BUTTON -->
+    </li>
+    <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+    <li class="nav-item start active open">
+        <a href="{{ path('dashboard') }}" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Ana Sayfa</span>
+            <span class="selected"></span>
+            <span class="arrow open"></span>
+        </a>
+    </li>
+
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">İtiraz Şikayet Yönetimi</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Döküman Yönetimi</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Belgelenirme</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Aday İşlemleri</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Soru Yönetimi</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Teorik</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('yeterlilik_liste') }}" class="nav-link "> Sorular </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('yeterlilik_yeni') }}" class="nav-link "> Yeni Soru Ekle </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Pratik</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('yeterlilik_liste') }}" class="nav-link "> Sorular </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('yeterlilik_yeni') }}" class="nav-link "> Yeni Soru Ekle </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </li>
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Sınav Yönetimi</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Tanımlamalar</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Yeterlilik</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('yeterlilik_liste') }}" class="nav-link "> Yeterlilikler </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('yeterlilik_yeni') }}" class="nav-link "> Yeni Yeterlilik </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Birim</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('birim_liste') }}" class="nav-link "> Birimler </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('birim_yeni') }}" class="nav-link "> Yeni Birim </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Alternatif</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('yeterlilik_liste') }}" class="nav-link "> Yeterlilikler </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('yeterlilik_yeni') }}" class="nav-link "> Yeni Yeterlilik </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Sınav Yeri</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('sinavyeri_index') }}" class="nav-link "> Sınav Yerleri </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('sinavyeri_new') }}" class="nav-link "> Yeni Sınav Yeri </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Sınav Komisyonu</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('yeterlilik_liste') }}" class="nav-link "> Yeterlilikler </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('yeterlilik_yeni') }}" class="nav-link "> Yeni Yeterlilik </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <span class="title">Pozisyonlar</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('pozisyon_index') }}" class="nav-link "> Pozisyonlar </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{ path('pozisyon_new') }}" class="nav-link "> Yeni Pozisyon </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </li>
+
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-puzzle"></i>
+            <span class="title">Raporlar</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="components_knob_dials.html" class="nav-link ">
+                    <span class="title">X</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

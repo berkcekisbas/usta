@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <div class="col-md-12">
+            <!-- BEGIN BORDERED TABLE PORTLET-->
+            <div class="portlet light portlet-fit bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="{{ title.icon }} font-dark"></i>
+                        <span class="caption-subject font-dark bold uppercase">{{ title.label }}</span>
+                    </div>
+
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided">
+                            <a href="{{ path('pozisyon_new') }}" class="btn btn-info active"><i class="fa fa-plus"></i> Yeni</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                    {% for flash_message in app.session.flashBag.get('success') %}
+                        <div class="alert alert-success">
+                            <strong><i class="fa fa-check"></i></strong> {{ flash_message }}
+                        </div>
+                    {% endfor %}
+
+                    {% for flash_message in app.session.flashBag.get('error') %}
+                        <div class="alert alert-danger">
+                            <strong><i class="fa fa-check"></i></strong> {{ flash_message }}
+                        </div>
+                    {% endfor %}
+
+                    <div class="table-scrollable">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Pozisyon Adı </th>
+                                <th> İşlemler </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for data in datas %}
+                            <tr>
+                                <td> {{ data.id }} </td>
+                                <td> {{ data.ad }} </td>
+                                <td>
+                                    <a href="{{ path('pozisyon_edit',{'id': data.id }) }}" class="label label-sm label-info"> Düzenle </a>&nbsp;
+                                    <a href="{{ path('pozisyon_delete',{'id': data.id}) }}" class="label label-sm label-danger"> Sil </a>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- END BORDERED TABLE PORTLET-->
+        </div>
+
+    </div>
+
+    </div>
+</div>
+ {% endblock %}
+

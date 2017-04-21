@@ -1,0 +1,93 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+
+
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="{{ title.icon }} font-red-sunglo"></i>
+                        <span class="caption-subject font-red-sunglo bold uppercase">{{ title.label }}</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-cloud-upload"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-wrench"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-trash"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portlet-body form">
+
+                    {% for flash_message in app.session.flashBag.get('success') %}
+                        <div class="alert alert-success">
+                            <strong><i class="fa fa-check"></i></strong> {{ flash_message }}
+                        </div>
+                    {% endfor %}
+
+
+                    <!-- BEGIN FORM-->
+                    {{ form_start(form) }}
+
+                    <div class="form-group">
+                        <div>
+                            <label class="col-md-3 control-label"  for="form_zorlukderecesi">Yeterlilik :</label>
+                        </div>
+                    <div class="col-md-4">
+                        <input disabled="disabled" readonly="readonly" class="form-control" type="text" value="{{ yeterlilik }}">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <label class="col-md-3 control-label"  for="form_zorlukderecesi">Birim :</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input disabled="disabled" readonly="readonly" class="form-control" type="text" value="{{ birim }}">
+                        </div>
+                    </div>
+
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+{% endblock %}
+
+{% block editor %}
+    <script>
+        CKEDITOR.editorConfig = function( config ) {
+            // Define changes to default configuration here. For example:
+            config.language = 'tr';
+            // config.uiColor = '#AADC6E';
+            config.width = 300;     // 500 pixels wide.
+            config.width = '50%';   // CSS unit (percent).
+            config.toolbar = 'Full';
+            config.enterMode = CKEDITOR.ENTER_BR;
+            config.shiftEnterMode = CKEDITOR.ENTER_BR;
+
+            config.toolbar_Full =
+                [
+                    { name: 'basicstyles', items : [ 'Bold','Italic','Underline' ] },
+                ];
+        };
+
+    </script>
+{% endblock %}
+

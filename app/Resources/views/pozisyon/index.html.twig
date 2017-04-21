@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pozisyons list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pozisyon in pozisyons %}
+            <tr>
+                <td><a href="{{ path('pozisyon_show', { 'id': pozisyon.id }) }}">{{ pozisyon.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('pozisyon_show', { 'id': pozisyon.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('pozisyon_edit', { 'id': pozisyon.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pozisyon_new') }}">Create a new pozisyon</a>
+        </li>
+    </ul>
+{% endblock %}

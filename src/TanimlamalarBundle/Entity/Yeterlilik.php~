@@ -1,0 +1,123 @@
+<?php
+
+namespace TanimlamalarBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Yeterlilik
+ *
+ * @ORM\Table(name="yeterlilik")
+ * @ORM\Entity(repositoryClass="TanimlamalarBundle\Repository\YeterlilikRepository")
+ */
+class Yeterlilik
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TanimlamalarBundle\Entity\Birim", mappedBy="yeterlilik")
+     */
+    private $birim;
+
+    /**
+     * @var string
+     * @Assert\NotBlank(message = "Bu Alan Boş Geçilemez")
+     * @ORM\Column(name="kod", type="string")
+     */
+    private $kod;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @ORM\Column(name="ad", type="string")
+     */
+    private $ad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="seviye", type="string")
+     */
+    private $seviye;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sektor", type="string")
+     */
+    private $sektor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="revizyon", type="string")
+     */
+    private $revizyon;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="onaytarihi", type="string")
+     */
+    private $onaytarihi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="onaysayisi", type="string")
+     */
+    private $onaysayisi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="t1sorusayisi", type="string")
+     */
+    private $t1sorusayisi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="t2sorusayisi", type="string")
+     */
+    private $t2sorusayisi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="t1gecmepuani", type="string")
+     */
+    private $t1gecmepuani;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="t2gecmepuani", type="string")
+     */
+    private $t2gecmepuani;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="belgegecerliliksuresi", type="string")
+     */
+    private $belgegecerliliksuresi;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="aktif", type="boolean")
+     */
+    private $aktif;
+
+
+}

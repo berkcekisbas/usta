@@ -1,0 +1,66 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * Pozisyon
+ *
+ * @ORM\Table(name="pozisyon")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PozisyonRepository")
+ */
+class Pozisyon
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     * @Assert\NotBlank(message = "Bu Alan Boş Geçilemez")
+     * @ORM\Column(name="ad", type="string")
+     */
+    private $ad;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set ad
+     *
+     * @param string $ad
+     *
+     * @return Pozisyon
+     */
+    public function setAd($ad)
+    {
+        $this->ad = $ad;
+
+        return $this;
+    }
+
+    /**
+     * Get ad
+     *
+     * @return string
+     */
+    public function getAd()
+    {
+        return $this->ad;
+    }
+}

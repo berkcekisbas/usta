@@ -1,0 +1,61 @@
+app_sinavyeri:
+    resource: "@AppBundle/Controller/SinavyeriController.php"
+    type:     annotation
+
+app_sinavyeri:
+    resource: "@AppBundle/Controller/SinavyeriController.php"
+    type:     annotation
+
+app_pozisyon:
+    resource: "@AppBundle/Controller/PozisyonController.php"
+    type:     annotation
+
+rapor:
+    resource: "@RaporBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sinav:
+    resource: "@SinavBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sorubankasi:
+    resource: "@SorubankasiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+belgelendirme:
+    resource: "@BelgelendirmeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+dokuman:
+    resource: "@DokumanBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sikayet:
+    resource: "@SikayetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+tanimlamalar:
+    resource: "@TanimlamalarBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/"
+    type:     annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
